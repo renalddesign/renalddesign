@@ -1,16 +1,462 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛУЧШЕ ЗВОНИТЕ РЕНАЛЬДУ | Дизайн, который защищает ваши права</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-<!--
-**renalddesign/renalddesign** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+    <style>
+        /* Saul Goodman Aesthetic Customizations */
+        :root {
+            --saul-yellow: #F7D002;
+            --saul-red: #D21F3C;
+            --saul-blue: #3B82F6;
+            --saul-dark: #1F2937;
+        }
 
-Here are some ideas to get you started:
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f3f4f6;
+            overflow-x: hidden;
+        }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+        h1, h2, h3, .impact-font {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Retro VHS Noise Effect overlay */
+        .vhs-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.05),
+                rgba(0, 0, 0, 0.05) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            z-index: 50;
+        }
+
+        /* 3D Button Push Effect */
+        .btn-push {
+            transition: all 0.1s;
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+        }
+        .btn-push:active {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Flashing Text Animation */
+        .flash-text-subtle {
+            animation: flash-subtle 3s infinite;
+        }
+        @keyframes flash-subtle {
+            0%, 100% { background-color: var(--saul-red); }
+            50% { background-color: var(--saul-dark); }
+        }
+
+        /* Wiggle Animation for badges */
+        .wiggle {
+            animation: wiggle 2s linear infinite;
+        }
+        @keyframes wiggle {
+            0%, 7% { transform: rotateZ(0); }
+            15% { transform: rotateZ(-5deg); }
+            20% { transform: rotateZ(3deg); }
+            25% { transform: rotateZ(-5deg); }
+            30% { transform: rotateZ(2deg); }
+            35%, 100% { transform: rotateZ(0); }
+        }
+
+        /* Cheap Gradient */
+        .cheap-gradient {
+            background: linear-gradient(180deg, #FFEB3B 0%, #F57F17 100%);
+        }
+
+        /* Star Shape Clip Path */
+        .star-shape {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7D002;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D21F3C;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- VHS Grain Overlay -->
+    <div class="vhs-overlay"></div>
+
+    <!-- Top Urgent Banner -->
+    <div class="bg-red-600 text-white py-1 overflow-hidden border-b-4 border-black">
+        <div class="marquee-container">
+            <div class="marquee-content impact-font text-xl tracking-wider">
+                ВНИМАНИЕ! НЕ ПЛАТИТЕ ЗА ПЛОХОЙ ДИЗАЙН! *** ВАШ БРЕНД СТЫДИТСЯ? ЗВОНИТЕ! *** ВНИМАНИЕ! НЕ ПЛАТИТЕ ЗА ПЛОХОЙ ДИЗАЙН! *** </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-700 border-b-4 border-black sticky top-0 z-40 shadow-xl">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-yellow-400 border-2 border-black flex items-center justify-center transform rotate-3">
+                    <span class="impact-font text-2xl">R</span>
+                </div>
+                <span class="impact-font text-2xl text-white tracking-widest italic" style="text-shadow: 2px 2px 0 #000;">РЕНАЛЬД</span>
+            </div>
+            <div class="hidden md:flex gap-6 impact-font text-lg text-white">
+                <a href="#about" class="hover:text-yellow-300 hover:underline decoration-4 underline-offset-4">ДОСЬЕ</a>
+                <a href="#services" class="hover:text-yellow-300 hover:underline decoration-4 underline-offset-4">УСЛУГИ</a>
+                <a href="#guarantees" class="hover:text-yellow-300 hover:underline decoration-4 underline-offset-4">ГАРАНТИИ</a>
+                <a href="#contact" class="hover:text-yellow-300 hover:underline decoration-4 underline-offset-4">КОНТАКТ</a>
+            </div>
+            <!-- Ссылается на форму контактов -->
+            <a href="#contact" class="bg-yellow-400 text-black border-2 border-black px-4 py-1 impact-font text-xl btn-push hover:bg-yellow-300 uppercase">
+                Звони сейчас!
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-yellow-400 border-b-4 border-black overflow-hidden pt-10 pb-20">
+        <!-- Background decorative elements -->
+        <div class="absolute top-10 right-10 w-32 h-32 bg-red-600 rounded-full border-4 border-black opacity-20"></div>
+        <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-600 rotate-12 border-4 border-black opacity-20"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-center md:text-left">
+                <div class="inline-block bg-black text-white px-4 py-1 impact-font text-2xl -rotate-2 mb-4">
+                    ВАШ БРЕНД В БЕДЕ?
+                </div>
+                <h1 class="text-6xl md:text-8xl leading-none text-red-600 mb-2 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]" style="line-height: 0.9;">
+                    ЛУЧШЕ<br>ЗВОНИТЕ<br><span class="text-blue-700">РЕНАЛЬДУ!</span>
+                </h1>
+                
+                <!-- Уменьшенная гарантия -->
+                <div class="inline-block text-white px-3 py-1 impact-font text-2xl md:text-3xl shadow-[4px_4px_0_rgba(0,0,0,1)] mt-4 mb-6 flash-text-subtle border-2 border-white">
+                    <i data-lucide="shield-check" class="w-6 h-6 inline mr-2 -translate-y-1"></i>
+                    ВАШ САЙТ НЕ БУДЕТ ВЫГЛЯДЕТЬ КАК ЭТО. ГАРАНТИРУЮ!
+                </div>
+                <!-- КОНЕЦ НОВОЙ ГАРАНТИИ -->
+
+                <p class="font-serif text-xl md:text-2xl font-bold mb-8 bg-white border-2 border-black p-4 shadow-[4px_4px_0_rgba(0,0,0,1)] inline-block rotate-1 mt-4">
+                    "Я БОРЮСЬ ЗА КАЖДЫЙ ПИКСЕЛЬ, ПОТОМУ ЧТО ВЫ ЭТОГО ДОСТОЙНЫ!"
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                    <!-- Кнопка теперь ведет к форме контактов -->
+                    <a href="#contact" class="btn-push bg-red-600 text-white border-4 border-black px-8 py-4 text-2xl impact-font uppercase flex items-center justify-center gap-2">
+                        <i data-lucide="siren" class="w-6 h-6 animate-pulse"></i>
+                        ПОЛУЧИТЬ ДИЗАЙН (И СПАТЬ СПОКОЙНО)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Изображение Ренальда (фото 1) -->
+            <div class="relative mt-10 md:mt-0 flex flex-col items-center gap-4">
+                <div class="star-shape w-32 h-32 bg-red-500 absolute top-0 right-0 z-20 flex items-center justify-center font-bold border-4 border-white animate-pulse">
+                    <span class="impact-font text-white text-center leading-none text-xl rotate-12">
+                        100%<br>КРУТО
+                    </span>
+                </div>
+                
+                <div class="w-full max-w-md h-96 bg-blue-800 border-4 border-black relative shadow-[10px_10px_0_rgba(0,0,0,1)] overflow-hidden flex items-center justify-center text-center text-white">
+                    <!-- 
+                         *** МЕСТО ДЛЯ ВАШЕГО ФОТО ***
+                         
+                         Для замены: 
+                         1. Убедитесь, что ваше фото загружено в редактор (используйте кнопку "Загрузить файл").
+                         2. Замените путь после "uploaded:" на ТОЧНОЕ ИМЯ ВАШЕГО ФАЙЛА.
+                         
+                         Пример: src="uploaded:мое_новое_фото.jpg"
+                    -->
+                    <img id="renald-photo-main"
+                         src="https://sun9-6.userapi.com/s/v1/ig2/kAjvgPeq0RnbS_ybfRqH_M_NCNS_tkoxp4fhDCLUxlh6EUbPgAMCZNksaLctzsZnbceugeqtUQvERuqxgjcNMVFr.jpg?quality=95&as=32x29,48x44,72x66,108x99,160x146,240x219,360x329,480x439,540x494,640x585,720x658,1080x988,1280x1171,1440x1317,1732x1584&from=bu&cs=1732x0" 
+                         alt="Фотография Ренальда Гудмана" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='placeholder'; this.style.opacity='0'; this.parentNode.style.backgroundColor='var(--saul-red)'; this.parentNode.innerHTML='<div class=\'impact-font text-2xl p-4\'>ГЛАВНОЕ ФОТО НЕ ЗАГРУЖЕНО<br>(ТЕХНИЧЕСКИЕ ПРОБЛЕМЫ)</div>' ">
+                    
+                    <div class="absolute bottom-0 w-full bg-black/80 text-white p-2 text-center impact-font text-xl border-t-2 border-white">
+                        РЕНАЛЬД ГУДМАН
+                    </div>
+                </div>
+
+                <!-- КНОПКА ТЕЛЕГРАММ -->
+                <a href="https://t.me/ilowwi" target="_blank" class="w-full max-w-md bg-green-500 text-white border-4 border-black px-4 py-2 impact-font text-2xl btn-push hover:bg-green-400 uppercase flex items-center justify-center gap-2 shadow-[4px_4px_0_rgba(0,0,0,1)] -rotate-1">
+                    <i data-lucide="message-square" class="w-6 h-6"></i>
+                    НАПИСАТЬ В ТЕЛЕГРАММ (Я НЕ ЗАНЯТ)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Indicators / Marquee (Static Line) -->
+    <section class="bg-black text-yellow-400 py-4 border-b-4 border-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="impact-font text-2xl md:text-3xl tracking-widest">
+                ВАШ БИЗНЕС ЛЕГАЛИЗОВАН. <span class="text-red-600">ДИЗАЙН ПРОВЕРЕН.</span> ЗВОНИТЕ СЕГОДНЯ!
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section: The Dossier -->
+    <section id="about" class="py-16 bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="flex items-center gap-4 mb-8">
+                <i data-lucide="scale" class="w-12 h-12 text-black"></i>
+                <h2 class="text-5xl text-black underline decoration-red-600 decoration-4 underline-offset-4">ЛИЧНОЕ ДЕЛО</h2>
+            </div>
+
+            <div class="bg-[#fff9c4] border-4 border-black p-6 shadow-[8px_8px_0_rgba(0,0,0,1)] rotate-1">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Фотография 3x4 (ЛИЧНОЕ ДЕЛО) -->
+                    <div class="md:col-span-1">
+                        <div class="border-2 border-black p-2 bg-white h-full flex flex-col items-center justify-center overflow-hidden">
+                            <!-- НОВОЕ ИЗОБРАЖЕНИЕ ИЗ ССЫЛКИ ПОЛЬЗОВАТЕЛЯ -->
+                            <img src="https://sun9-73.userapi.com/s/v1/ig2/JE44ECPpdqr6zDKEEfn8cyPuMRMxHYfpTs3oH7Pgk48MzaU93XegQ3pFPA9scuJCNM7PskFlqtBxoLZXoXcxa1u4.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&from=bu&cs=640x0" 
+                                 alt="Фотография Ренальда 3x4" 
+                                 class="object-cover w-full h-full min-h-[250px] border border-gray-400">
+                            <span class="impact-font text-xl bg-black text-white px-2 mt-2">ФОТО 3x4</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 font-serif">
+                        <h3 class="text-3xl mb-4 impact-font">ИМЯ: РЕНАЛЬД</h3>
+                        <p class="mb-4 text-lg"><strong>Профессия:</strong> Графический Дизайнер / UI/UX Адвокат <span class="text-red-600">(Почти)</span></p>
+                        <p class="mb-4 text-lg"><strong>Миссия:</strong> Спасти мир от Comic Sans и плохих отступов. Вы думали, что ваш логотип в порядке? Подумайте еще раз! Полиция стиля уже выехала. <span class="italic font-bold">(Она едет медленно, но не просит взятки.)</span></p>
+                        <p class="italic text-gray-600">"Я не просто рисую картинки. Я создаю алиби для вашего бизнеса."</p>
+                        
+                        <div class="mt-6 flex gap-4">
+                            <div class="bg-red-100 border-2 border-red-600 text-red-600 px-3 py-1 font-bold transform -rotate-2">
+                                ОДОБРЕНО
+                            </div>
+                             <div class="bg-blue-100 border-2 border-blue-600 text-blue-600 px-3 py-1 font-bold transform rotate-2">
+                                СЕРТИФИЦИРОВАНО (МНОЙ)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services: "Crimes I Commit" -->
+    <section id="services" class="py-16 bg-blue-700 border-y-4 border-black text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl text-center mb-12 text-yellow-400 drop-shadow-[4px_4px_0_#000]">МОИ УСЛУГИ</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1: Web Design (Only Figma) -->
+                <div class="bg-white text-black p-6 border-4 border-black btn-push relative group">
+                    <div class="absolute -top-6 -right-6 bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold border-2 border-black rotate-12 z-10 group-hover:scale-110 transition-transform">
+                        ХИТ!
+                    </div>
+                    <div class="h-12 w-12 bg-yellow-400 border-2 border-black mb-4 flex items-center justify-center">
+                        <i data-lucide="layout-template" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-3xl mb-2">ВЕБ-ДИЗАЙН</h3>
+                    <p class="font-serif">Сайты, которые работают как часы, которые я купил у очень сомнительного типа. Работаю только в <span class="font-bold text-red-600">Figma</span> (мне так проще). И да, я не юрист.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white text-black p-6 border-4 border-black btn-push relative">
+                    <div class="h-12 w-12 bg-blue-400 border-2 border-black mb-4 flex items-center justify-center">
+                        <i data-lucide="palette" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-3xl mb-2">БРЕНДИНГ</h3>
+                    <p class="font-serif">Отмывание репутации... то есть, создание нового лица вашей компании. Логотипы, которые запоминают (по правильным причинам), а не как тот случай в 98-м.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white text-black p-6 border-4 border-black btn-push relative">
+                    <div class="h-12 w-12 bg-red-400 border-2 border-black mb-4 flex items-center justify-center">
+                        <i data-lucide="smartphone" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-3xl mb-2">UI/UX</h3>
+                    <p class="font-serif">Заставляю пользователей нажимать туда, куда нужно ВАМ. Законные манипуляции интерфейсом. Гарантирую, что кнопка "Купить" будет заметнее, чем ваш страх.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantees: Guarantees (or Lack Thereof) -->
+    <section id="guarantees" class="py-16 bg-red-600 border-y-4 border-black text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl text-center mb-2 text-yellow-400 drop-shadow-[4px_4px_0_#000]">
+                ГАРАНТИИ <span class="text-white">(ИЛИ ИХ ОТСУТСТВИЕ)</span>
+            </h2>
+            <p class="text-center font-serif text-xl mb-12 italic">(Читайте мелким шрифтом, пока я отвлекся на кофе)</p>
+
+            <div class="bg-gray-800 p-8 border-4 border-yellow-400 shadow-[8px_8px_0_rgba(0,0,0,1)]">
+                <ul class="space-y-4 font-serif list-disc list-inside text-lg">
+                    <li><strong class="text-yellow-400">Гарантия №1:</strong> Вы получите дизайн. Это 100%. Вы его полюбите? 50/50. Но он будет.</li>
+                    <li><strong class="text-yellow-400">Гарантия №2:</strong> Финальная приемка проекта — это не поход в музей. Ощущения "не зашло" аннулируются юридической силой ТЗ.</li>
+                    <li><strong class="text-yellow-400">Гарантия №3:</strong> ТЗ — это священный текст. Каждая его правка после начала работ приравнивается к новой поправке в Конституции. Подготовка документов занимает время... и требует инвестиций.</li>
+                    <li><strong class="text-yellow-400">Гарантия №4:</strong> Моя скорость прямо пропорциональна количеству кофеина в моей крови. Поторопитесь!</li>
+                    <li><strong class="text-yellow-400">Гарантия №5:</strong> Ваш сайт будет выглядеть *гораздо* лучше, чем этот. Обещаю (наверное).</li>
+                </ul>
+            </div>
+            <p class="text-center font-serif text-sm mt-6 text-yellow-400">* Подробные условия ищите в мусорном ведре, где лежит старый дизайн вашего конкурента. <span class="font-bold">Или в моем контракте.</span></p>
+        </div>
+    </section>
+
+    <!-- Testimonials (Updated) -->
+    <section class="py-12 bg-yellow-400 border-y-4 border-black">
+        <div class="container mx-auto px-4 text-center">
+            <i data-lucide="quote" class="w-12 h-12 mx-auto mb-4 text-black"></i>
+            <p class="text-2xl md:text-4xl font-serif font-bold italic mb-6 max-w-3xl mx-auto">
+                "После того как Ренальд оформил мой сайт, налоговая перестала присылать мне странные письма. Это совпадение? Думаю, нет. Теперь мой бизнес выглядит подозрительно легально."
+            </p>
+            <p class="impact-font text-xl uppercase">- Тот, кто всегда на связи</p>
+            <div class="flex justify-center mt-4">
+                <i data-lucide="star" class="fill-black text-black"></i>
+                <i data-lucide="star" class="fill-black text-black"></i>
+                <i data-lucide="star" class="fill-black text-black"></i>
+                <i data-lucide="star" class="fill-black text-black"></i>
+                <i data-lucide="star" class="fill-black text-black"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-6xl md:text-9xl impact-font text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-600 mb-8" style="-webkit-text-stroke: 2px white;">
+                ЗВОНИТЕ!
+            </h2>
+            
+            <div class="bg-white text-black max-w-2xl mx-auto p-8 border-8 border-yellow-400 rotate-1 shadow-[0_0_20px_rgba(247,208,2,0.5)]">
+                <div class="flex items-center justify-center gap-4 mb-6">
+                    <i data-lucide="phone-call" class="w-12 h-12 text-red-600 animate-bounce"></i>
+                    <span class="text-4xl impact-font tracking-wider">555-0199-RENALD</span>
+                </div>
+                
+                <!-- Заменено <form> на <div>, так как теперь это прямая ссылка -->
+                <div class="space-y-4 text-left font-serif">
+                    <div>
+                        <label class="block font-bold mb-1 uppercase text-sm">Ваше Имя (Клиент)</label>
+                        <input type="text" class="w-full bg-gray-100 border-2 border-black p-3 focus:outline-none focus:bg-yellow-100" placeholder="Ваше настоящее имя (иногда)">
+                    </div>
+                    <div>
+                        <label class="block font-bold mb-1 uppercase text-sm">Суть Претензии (ТЗ)</label>
+                        <textarea class="w-full bg-gray-100 border-2 border-black p-3 h-32 focus:outline-none focus:bg-yellow-100" placeholder="Мне нужен дизайн, чтобы наконец-то перестать стыдиться своего сайта."></textarea>
+                    </div>
+                    <!-- Заменено <button> на <a> с ссылкой на Telegram -->
+                    <a href="https://t.me/ilowwi" target="_blank" class="w-full bg-blue-600 text-white impact-font text-2xl py-4 border-2 border-black hover:bg-blue-700 btn-push uppercase flex items-center justify-center">
+                        <i data-lucide="send" class="w-6 h-6 mr-2"></i>
+                        ОТПРАВИТЬ ЗАПРОС (Я УЖЕ ЖДУ)
+                    </a>
+                    <p class="text-xs text-center text-gray-500 mt-2">* Консультация бесплатна, дизайн - нет. <span class="font-bold">Это же очевидно!</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 border-t-4 border-yellow-400">
+        <div class="container mx-auto px-4 text-center font-serif text-sm">
+            <p class="mb-2">&copy; 2024 Ренальд Дизайн Групп. Все права защищены (наверное).</p>
+            <p class="text-xs max-w-2xl mx-auto leading-relaxed opacity-50">
+                Отказ от ответственности: Ренальд не является настоящим юристом. Любое сходство с сериалом "Better Call Saul" является случайным, но намеренным. Использование цветов #F7D002 и #D21F3C может вызвать привыкание. Не смотрите на монитор слишком долго. <span class="font-bold">И да, портфолио в разработке.</span>
+            </p>
+            <!-- Оставили только Telegram -->
+            <div class="mt-8 flex justify-center gap-4">
+                <i data-lucide="send" class="w-5 h-5 text-yellow-600"></i>
+                <a href="https://t.me/ilowwi" target="_blank" class="hover:text-white impact-font text-lg uppercase">НАПИСАТЬ В ТЕЛЕГРАМ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Init Icons and Delayed Image Load -->
+    <script>
+        lucide.createIcons();
+        
+        // ** Трюк для принудительной загрузки изображения **
+        function delayedLoad() {
+            const img = document.getElementById('renald-photo-main');
+            if (img) {
+                // Сохраняем и сбрасываем src, чтобы принудительно запустить повторную загрузку
+                const currentSrc = img.src;
+                img.src = '';
+                img.src = currentSrc;
+                console.log('Попытка принудительной перезагрузки основного изображения...');
+            }
+        }
+        
+        // Запускаем через 1 секунду после загрузки DOM
+        window.onload = function() {
+            setTimeout(delayedLoad, 1000);
+        };
+
+
+        // Simple Interaction: Funny Alerts on Button Click
+        // Этот блок остался, но теперь он не будет влиять на кнопку "Отправить Запрос", т.к. она стала ссылкой <a>
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Ensure we only affect buttons that are not the contact submit button
+                if(e.target.closest('button') && e.target.closest('button').type !== 'submit') {
+                    // Just a visual flair, no alert box to annoy user too much
+                    const targetBtn = e.target.closest('button');
+                    const originalText = targetBtn.innerText;
+                    
+                    // Check if the button has already been clicked and is processing
+                    if (targetBtn.dataset.processing === 'true') return;
+                    targetBtn.dataset.processing = 'true';
+                    
+                    targetBtn.innerText = "ОБРАБАТЫВАЕМ...";
+                    setTimeout(() => {
+                        targetBtn.innerText = "ГОТОВО!";
+                        setTimeout(() => {
+                             targetBtn.innerText = originalText;
+                             targetBtn.dataset.processing = 'false';
+                        }, 1000);
+                    }, 500);
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
